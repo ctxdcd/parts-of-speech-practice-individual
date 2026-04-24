@@ -1,0 +1,271 @@
+/* AZAR GUIDE: PRO DRILL CSS 
+    Theme: Apple-ish Minimalist (Full-Width)
+*/
+
+:root {
+    --bg-dark: #000000;
+    --accent-blue: #0071e3;
+    --glass-white: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --text-primary: #f5f5f7;
+    --text-secondary: #86868b;
+    --correct: #30d158;
+    --wrong: #ff453a;
+    --font-main: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", "Segoe UI", sans-serif;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.viewport-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- NAVIGATION --- */
+.global-nav {
+    height: 64px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 100;
+}
+
+.back-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover { color: var(--text-primary); }
+
+.progress-track {
+    width: 280px;
+    height: 4px;
+    background: var(--glass-white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--accent-blue);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.session-id { 
+    font-size: 11px; 
+    letter-spacing: 1.2px; 
+    color: var(--text-secondary); 
+    font-weight: 600;
+}
+
+/* --- MAIN WORKSPACE --- */
+.content-canvas {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.module-tag {
+    font-size: 12px;
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.hero-word {
+    font-size: clamp(3.5rem, 12vw, 9rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin: 6vh 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- BUTTONS --- */
+.button-row {
+    display: flex;
+    gap: 20px;
+}
+
+.action-trigger {
+    background: var(--glass-white);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    width: 220px;
+    padding: 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+}
+
+.action-trigger:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+}
+
+.action-trigger:active { transform: scale(0.97); }
+
+.action-trigger .label { font-size: 18px; font-weight: 600; display: block; }
+.action-trigger .sub-label { font-size: 12px; color: var(--text-secondary); }
+
+/* --- STATUS BAR (3-COLUMN) --- */
+.status-bar {
+    height: 100px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 140px;
+}
+
+.align-right {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.stat-label { 
+    font-size: 10px; 
+    font-weight: 700; 
+    color: var(--text-secondary); 
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.stat-value { 
+    font-size: 24px; 
+    font-weight: 600; 
+    font-variant-numeric: tabular-nums; 
+}
+
+/* --- QUICK REFERENCE --- */
+.reference-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+.reference-link:hover { transform: translateX(-4px); }
+
+.link-icon {
+    font-size: 12px;
+    color: var(--accent-blue);
+    background: var(--glass-white);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border);
+}
+
+/* Mode Dropdown Styling */
+.mode-dropdown {
+    background: var(--glass-white);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-dropdown:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+/* Writing Mode Input */
+.writing-input {
+    background: var(--glass-white);
+    border: 2px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 20px 40px;
+    font-size: 24px;
+    color: white;
+    width: 400px;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.writing-input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 20px rgba(0, 113, 227, 0.2);
+}
+
+/* MCQ Grid Layout */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* --- FEEDBACK STATES --- */
+.correct-state { color: var(--correct); }
+.wrong-state { color: var(--wrong); animation: appleShake 0.4s; }
+
+@keyframes appleShake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-12px); }
+    40%, 80% { transform: translateX(12px); }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .status-bar { padding: 0 30px; }
+    .hero-word { font-size: 4rem; }
+    .action-trigger { width: 160px; }
+}

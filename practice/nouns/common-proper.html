@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noun Practice | Full-Width Lab</title>
+    <link rel="stylesheet" href="../../css/practice/types.css">
+</head>
+<body>
+
+    <main class="viewport-wrapper">
+        <nav class="global-nav">
+            <div class="nav-left">
+                <a href="../../index.html" class="back-link">
+                    <span class="icon">×</span> Close Lab
+                </a>
+            </div>
+            <div class="nav-center">
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <select id="modeSelect" class="mode-dropdown" onchange="changeMode(this.value)">
+                    <option value="binary">True / False</option>
+                    <option value="multiple">Multiple Choice</option>
+                    <option value="writing">Writing Mode</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="content-canvas">
+            <div class="instruction-layer">
+                <span class="module-tag">Practice Module</span>
+                <h1 class="main-title">Common or Proper?</h1>
+            </div>
+
+            <div class="focus-layer">
+                <h2 id="wordDisplay" class="hero-word">Loading...</h2>
+            </div>
+
+            <div id="controlLayer" class="control-layer"></div>
+        </div>
+
+        <footer class="status-bar">
+            <div class="stat-group">
+                <span class="stat-label">ACCURACY</span>
+                <span id="accuracy" class="stat-value">0%</span>
+            </div>
+            <div class="stat-group">
+                <span class="stat-label">COMPLETED</span>
+                <span id="currentCount" class="stat-value">0/10</span>
+            </div>
+            <div class="stat-group align-right">
+                <span class="stat-label">QUICK REFERENCE</span>
+                <a href="../../practice/definitions/common-proper.html" class="reference-link">
+                    <span class="stat-value">NOUN TYPES</span>
+                    <span class="link-icon">↗</span>
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="../../js/practice/types.js"></script>
+</body>
+</html>

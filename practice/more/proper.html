@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice | Proper Nouns</title>
+    <link rel="stylesheet" href="../../css/more/proper.css">
+</head>
+<body>
+    <div class="viewport-wrapper">
+        <nav class="quiz-nav">
+            <div class="nav-left">
+                <a href="../../practice/definitions/common-proper.html" class="exit-btn">✕</a>
+                <span class="divider"></span>
+                <span class="quiz-title">Proper Nouns</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="nav-right">
+                <span id="questionCounter">1/15</span>
+            </div>
+        </nav>
+
+        <main class="quiz-main">
+            <div id="quiz-container">
+                <div class="question-card fade-in" id="questionCard">
+                    <span class="q-label">Question <span id="currentQNum">1</span></span>
+                    <h2 id="questionText">Which of the following is a proper noun?</h2>
+                    
+                    <div class="options-grid" id="optionsGrid">
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultScreen" class="result-screen hidden">
+                <div class="result-glass">
+                    <h1 id="scorePercent">0%</h1>
+                    <p id="scoreText">Keep practicing to master proper nouns!</p>
+                    <button class="retry-btn" onclick="location.reload()">Try Again</button>
+                    <a href="../../practice/definitions/common-proper.html" class="finish-btn">Done</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../js/more/proper.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Parts of Speech | Individual</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-shell">
+        <nav class="top-bar">
+            <div class="logo">Practice Parts of Speech</div>
+            <div class="nav-utils">
+                <div class="search-bar">Search modules...</div>
+                <div class="profile-circle">Z</div>
+            </div>
+        </nav>
+
+        <aside class="side-bar">
+            <div class="side-item active">Dashboard</div>
+            <div class="side-item">On Progress</div>
+            <div class="side-item">On Progress</div>
+            <div class="side-item">On Progress</div>
+            <div class="side-footer">v1.0.5 Beta</div>
+        </aside>
+
+        <main class="content-area">
+            <header class="content-header">
+                <h1>English Lab Gateway</h1>
+                <p>Choose a category to access your practice modules.</p>
+            </header>
+
+            <section class="card-stack">
+                <div class="wide-card c-yellow" onclick="openModal('nouns')">
+                    <div class="info">
+                        <span class="tag">Unit 1</span>
+                        <h2>Nouns</h2>
+                        <p>Classifications, Number, and Case.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="wide-card c-red" onclick="openModal('pronouns')">
+                    <div class="info">
+                        <span class="tag">Unit 2</span>
+                        <h2>Pronouns</h2>
+                        <p>Personal, Relative, and Interrogative.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="wide-card c-green" onclick="openModal('verbs')">
+                    <div class="info">
+                        <span class="tag">Unit 3</span>
+                        <h2>Verbs</h2>
+                        <p>Tenses, Modals, and Conditionals.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="wide-card c-orange" onclick="openModal('auxiliaries')">
+                    <div class="info">
+                        <span class="tag">Unit 4</span>
+                        <h2>Auxiliaries</h2>
+                        <p>Helping verbs and Modal functions.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="wide-card c-teal" onclick="openModal('adjectives')">
+                    <div class="info">
+                        <span class="tag">Unit 5</span>
+                        <h2>Adjectives</h2>
+                        <p>Descriptive order and Comparison.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="wide-card c-blue" onclick="openModal('articles')">
+                    <div class="info">
+                        <span class="tag">Unit 6</span>
+                        <h2>Articles</h2>
+                        <p>Definite and Indefinite usage.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="wide-card c-lightblue" onclick="openModal('adverbs')">
+                    <div class="info">
+                        <span class="tag">Unit 7</span>
+                        <h2>Adverbs</h2>
+                        <p>Manner, Time, Place, and Frequency.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+
+                <div class="wide-card c-purple" onclick="openModal('prepositions')">
+                    <div class="info">
+                        <span class="tag">Unit 8</span>
+                        <h2>Prepositions</h2>
+                        <p>Spatial and Temporal relationships.</p>
+                    </div>
+                    <div class="arrow">→</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="practiceModal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="close-modal" onclick="closeModal()">✕</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
